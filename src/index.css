@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Plus+Jakarta+Sans&display=swap");
+
+@font-face {
+  font-family: "ClashDisplay-Variable";
+  src: url("./assets/fonts/ClashDisplay-Variable.woff2") format("woff2"),
+    url("./assets/fonts/ClashDisplay-Variable.woff") format("woff"),
+    url("./assets/fonts/ClashDisplay-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Extralight";
+  src: url("./assets/fonts/ClashDisplay-Extralight.woff2") format("woff2"),
+    url("./assets/fonts/ClashDisplay-Extralight.woff") format("woff"),
+    url("./assets/fonts/ClashDisplay-Extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Light";
+  src: url("./assets/fonts/ClashDisplay-Light.woff2") format("woff2"),
+    url("./assets/fonts/ClashDisplay-Light.woff") format("woff"),
+    url("./assets/fonts/ClashDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Regular";
+  src: url("./assets/fonts/ClashDisplay-Regular.woff2") format("woff2"),
+    url("./assets/fonts/ClashDisplay-Regular.woff") format("woff"),
+    url("./assets/fonts/ClashDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Medium";
+  src: url("./assets/fonts/ClashDisplay-Medium.woff2") format("woff2"),
+    url("./assets/fonts/ClashDisplay-Medium.woff") format("woff"),
+    url("./assets/fonts/ClashDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Semibold";
+  src: url("./assets/fonts/ClashDisplay-Semibold.woff2") format("woff2"),
+    url("./assets/fonts/ClashDisplay-Semibold.woff") format("woff"),
+    url("./assets/fonts/ClashDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Bold";
+  src: url("./assets/fonts/ClashDisplay-Bold.woff2") format("woff2"),
+    url("./assets/fonts/ClashDisplay-Bold.woff") format("woff"),
+    url("./assets/fonts/ClashDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
